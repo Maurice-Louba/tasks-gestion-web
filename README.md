@@ -1,54 +1,76 @@
-# React + TypeScript + Vite
+# 🗂️ Tasks Gestion Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Tasks Gestion Web** est une application web de gestion de tâches moderne, développée avec React. Elle permet de créer, modifier, supprimer et suivre des tâches de manière simple et intuitive.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Fonctionnalités
 
-## Expanding the ESLint configuration
+- Ajouter de nouvelles tâches avec description et statut  
+- Modifier et mettre à jour les tâches existantes  
+- Supprimer des tâches  
+- Affichage dynamique de la liste des tâches  
+- Interface responsive et conviviale  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Technologies utilisées
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Frontend :** React, TypeScript  
+- **Outils :** Vite  
+- **Styles :** CSS / Tailwind CSS (selon usage)  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 📂 Structure du projet
+
+tasks-gestion-web/
+├── public/ # Fichiers statiques
+├── src/ # Code source React
+│ ├── components/ # Composants React
+│ ├── assets/ # Images, styles, etc.
+│ ├── App.tsx # Composant principal
+│ └── main.tsx # Point d’entrée
+├── package.json # Dépendances et scripts
+├── tsconfig.json # Configuration TypeScript
+└── README.md # Ce fichier
+
+---
+
+## 🎯 Installation et lancement
+
+### Prérequis
+
+- Node.js et npm installés sur ta machine
+
+### Installation
+
+Ouvre un terminal dans le dossier du projet et lance :
+
+```bash
+npm install
+
+
+
+## ⚙️ Configuration de la base de données
+
+Le projet utilise une base de données SQL Server. Voici la configuration Django pour se connecter à la base :
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'mssql',
+        'NAME': 'Projet',
+        'HOST': 'localhost\\SQLEXPRESS',
+        'PORT': '',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            'trusted_connection': 'yes',
+        },
+    }
+}
+
+👨‍💻 Auteur
+Maurice Louba
+GitHub : @Maurice-Louba
+
